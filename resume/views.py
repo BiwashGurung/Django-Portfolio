@@ -7,5 +7,57 @@ def home(request):
 def about(request):
     return render(request,"about.html")
 
-def project(request):
-    return render(request,"project.html")
+def projects (request):
+    projects_show=[
+        {
+            'title': "Biwash's Culinary Haven",
+            'path': 'images/culinary.png',
+            'live_url':'https://biwashgurung.github.io/Chef-BiwashGurung-Website/',
+        },
+        {
+            'title': 'DG Clothing Store',
+            'path': 'images/DGClothing.png',
+            'live_url':'https://biwashgurung.github.io/Ecommerce-Online-Clothing-Store/',
+
+        },
+
+        {
+            'title': 'PUBG Website',
+            'path': 'images/pubg.png',
+            'live_url':'https://biwashgurung.github.io/PUBG-Website/',
+
+        },
+        {
+            'title': 'Personal Portfolio Design',
+            'path': 'images/portfolio.png',
+            'live_url':'https://biwashgurung.github.io/Portfolio-Design/',
+
+        },
+
+         {
+            'title': 'Dexys Store',
+            'path': 'images/Dexys Sotre.png',
+            'live_url':'https://biwashgurung.github.io/Dexy-s-Store/',
+
+        },
+          {
+            'title': 'Shringar With Dexys Style',
+            'path': 'images/Shringar.png',
+            'live_url':'https://biwashgurung.github.io/Shringar-with-dexys-style/',
+
+        },
+         {
+            'title': 'Aqua Bazzar',
+            'path': 'images/Aqua.png',
+            'live_url':'https://biwashgurung.github.io/Aquarium-Store/',
+
+        },
+                  {
+            'title': 'PokharaWebMasters',
+            'path': 'images\Pokhara Web.png',
+            'live_url':'https://biwashgurung.github.io/PokharaWebMasters/',
+
+        },
+
+    ]
+    return render (request,"projects.html",{"projects_show": projects_show})
