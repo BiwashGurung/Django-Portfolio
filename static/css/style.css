@@ -1,0 +1,71 @@
+body{
+    background-color: rgb(20,0,30);
+}
+
+/* NAV BARR */
+.navbar-nav .nav-link:hover{
+    font-weight: bold;
+    color:#4fffb0;
+}
+.navbar-nav .nav-link{
+    font-size:20px;
+}
+
+.navbar-brand{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.navbar-dark{
+    background-color: rgb(18,1,46);
+}
+
+
+/* HOME PAGEE */
+.circular-image-container{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-image{
+    width: 120%;
+    height: auto;
+    display: block;
+}
+.name{
+    color: #fff;
+}
+
+.title{
+    color: #4fffb0;
+}
+
+.social_links{
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* ABOUT PAGE */
+.about_image{
+    width: 450px;
+    height: 450px;
+    display: block;
+    margin-bottom: 7%;
+    
+}
+
+
+
+
