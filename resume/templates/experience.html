@@ -1,34 +1,42 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content1 %}
-<div class="row my-2">
+{% extends "base.html" %} {% load static %} {% block content1 %}
+<div class="container my-4" style="max-width: 700px; margin: 0 auto">
   {% for eachitem in experience %}
-  <div 
-    class="jumbotron jumbotron-fluid mt-2" 
-    style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; position: relative;"
+  <div
+    class="jumbotron jumbotron-fluid mt-3"
+    style="
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+    "
   >
-    <h1 
-      class="display4" 
-      style="color: #343a40; font-size: 24px; font-weight: bold; margin-bottom: 10px;"
+    <h1
+      class="display4"
+      style="
+        color: #343a40;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      "
     >
       {{ eachitem.company }}
     </h1>
-    <p 
-      class="lead" 
-      style="font-size: 18px; color: #007bff; margin-bottom: 5px;"
-    >
+    <p class="lead" style="font-size: 18px; color: #007bff; margin-bottom: 5px">
       {{ eachitem.position }}
     </p>
-    <p 
-      class="text-muted" 
-      style="font-size: 16px; color: #6c757d; position: absolute; top: 20px; right: 20px; text-align: right;"
+    <p
+      class="text-muted"
+      style="
+        font-size: 16px;
+        color: #6c757d;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        text-align: right;
+      "
     >
-      {{ eachitem.start_date }} - 
-      {% if eachitem.end_date %} 
-        {{ eachitem.end_date }}
-      {% else %}
-        Present
-      {% endif %}
+      {{ eachitem.start_date }} - {% if eachitem.end_date %} 
+      {{ eachitem.end_date }} {% else %} Present {% endif %}
     </p>
   </div>
   {% endfor %}

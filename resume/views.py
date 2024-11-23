@@ -84,3 +84,8 @@ def experience(request):
         },
     ]
     return render(request, "experience.html", {"experience": experience})
+
+def certifications(request):
+    return render(request,"certifications.html")
+def contact(request):
+    return render(request,"contact.html")
