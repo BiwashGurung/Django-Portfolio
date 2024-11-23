@@ -61,3 +61,26 @@ def projects (request):
 
     ]
     return render (request,"projects.html",{"projects_show": projects_show})
+
+def experience(request):
+    experience = [
+        {
+            "company": "Dexy Co.",
+            "position": "FullStack Developer",
+            "start_date": "2024/01/03",
+            "end_date": "Present",
+        },
+        {
+            "company": "PokharaWebMasters",
+            "position": "Python Developer",
+            "start_date": "2023/06/07",
+            "end_date": "2023/12/27",
+        },
+        {
+            "company": "CodeHub IT and Solution",
+            "position": "Jr. Python Developer",
+            "start_date": "2022/03/01",
+            "end_date": "2023/05/30",
+        },
+    ]
+    return render(request, "experience.html", {"experience": experience})
