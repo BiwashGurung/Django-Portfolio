@@ -1,5 +1,17 @@
 {% extends "base.html" %} {% load static %} {% block content1 %}
-<div class="row">
-  
-</div>
+<div class="row my-2">
+    {% for certifications in certifications %}
+    <div class="col-6 my-4">
+      <h4 class="text-light">{{ certifications.title }}</h4>
+      
+        <img
+          src="{% static certifications.path %}"
+          width="800"
+          height="800"
+          class="img-fluid"
+        />
+      </a>
+    </div>
+    {% endfor %}
+  </div>
 {% endblock content1 %}

@@ -68,7 +68,7 @@ def experience(request):
     experience = [
         {
             "company": "Dexy Co.",
-            "position": "FullStack Developer",
+            "position": "jr. FullStack Developer with Python,Django",
             "start_date": "2024/01/03",
             "end_date": "Present",
         },
@@ -88,7 +88,30 @@ def experience(request):
     return render(request, "experience.html", {"experience": experience})
 
 def certifications(request):
-    return render(request,"certifications.html")
+    certifications = [
+        {
+            "title": "Learning Python",
+            'path': 'certification\python.png',
+            
+        },
+        {
+            "title": "Introduction to Django",
+            'path': 'certification\django.png',
+        },
+        {
+            "title": "Learning Git and Github",
+            'path': 'certification\git.png',
+        },
+        {
+            "title": "Data Science and Machine Learning Workshop",
+            'path': 'certification\datascience.png',
+        },
+    ]
+    
+
+    return render(request,"certifications.html", {"certifications": certifications})
+
+
 def contact(request):
     return render(request,"contact.html")
 
